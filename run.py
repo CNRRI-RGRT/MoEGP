@@ -34,7 +34,7 @@ def get_parse():
     return parser.parse_args()
 
 
-def convert_hidden_str_to_list(hidden_str):
+def convert_hidden_input_to_list(hidden_str):
     a_str = ''
     for i in hidden_str:
         a_str += i.replace("'", '')
@@ -52,10 +52,10 @@ def main():
     epochs = args.epochs
     batch_size = args.batch_size
     best_metrics = args.best_metrics
-    if isinstance(args.hidden_dim_list, list):
-        hidden_dim_list = args.hidden_dim_list
+    if isinstance(args.hidden_dim_list[0], str):
+        hidden_dim_list = [list(map(int, x)) for x in convert_hidden_input_to_list(args.hidden_dim_list)]
     else:
-        hidden_dim_list = [list(map(int, x)) for x in convert_hidden_str_to_list(args.hidden_dim_list)]
+        hidden_dim_list = args.hidden_dim_list
     num_experts = list(map(int, args.num_experts))
     lrs = list(map(float, args.lr))
     dropouts = list(map(float, args.dropouts))

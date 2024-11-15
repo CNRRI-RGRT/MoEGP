@@ -29,13 +29,13 @@ The code is written in Python 3 (>= 3.10). The list of dependencies can be found
    ```shell
   --input_dir INPUT_DIR, input data dir, the data is already properly divided into training and validation sets, formatted as a data dictionary.
   --input_json INPUT_JSON, input json file, format as input_data.json
-  --output_dir OUTPUT_DIR, 
+  --output_dir OUTPUT_DIR 
   --epochs EPOCHS
   --batch_size BATCH_SIZE
-  --lr LR learning rate, 
+  --lr LR, learning rate 
   --dropouts DROPOUTS [DROPOUTS ...]
   --hidden_dim_list HIDDEN_DIM_LIST [HIDDEN_DIM_LIST ...]
-  --num_experts NUM_EXPERTS [NUM_EXPERTS ...]
+  --num_experts NUM_EXPERTS [NUM_EXPERTS ...], the number of expert
   --best_metrics {pearson,rmse}
                         select the best model through metrics, default pearson
   --zscore ZSCORE       whether to use zscore normalization in the modeling
@@ -47,6 +47,6 @@ The code is written in Python 3 (>= 3.10). The list of dependencies can be found
    ├── metrics.csv  # metrics result from all task
    ├── TA-LS2013  # task1
    └── TN-LS2013  # task2
-       └── TN-LS2013_Pred.csv  # the predict result
+       └── TN-LS2013_Pred.csv  # predict result
 ```
    
