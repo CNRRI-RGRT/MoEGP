@@ -31,7 +31,6 @@ The code is written in Python 3 (>= 3.10). The list of dependencies can be found
   --input_json INPUT_JSON, input json file, format as input_data.json
   --output_dir OUTPUT_DIR 
   --epochs EPOCHS
-  --batch_size BATCH_SIZE
   --lr LR, learning rate 
   --dropouts DROPOUTS [DROPOUTS ...]
   --hidden_dim_list HIDDEN_DIM_LIST [HIDDEN_DIM_LIST ...]

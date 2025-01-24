@@ -64,7 +64,7 @@ class Trainer:
             train_y_true = []
             train_y_pred = []
             loss_list = []
-            for x, y in train_data:
+            for idx, (x, y) in enumerate(train_data):
                 optimizer.zero_grad()
                 result = model(x)
                 if isinstance(result, tuple):
@@ -88,7 +88,7 @@ class Trainer:
             valid_best_metrics_pearson = evaluator(val_y_true, val_pred, 'pearson')
 
             # print
-            if (epoch + 1) % 50 == 0:
+            if (epoch + 1) % 10 == 0:
                 print(f'Training Epoch: {epoch}, Loss: {train_loss:.4f}, '
                       f'{self.task_model.metrics_names[0]}: '
                       f'{evaluator(train_y_true, train_y_pred, self.task_model.metrics_names[0])}, '

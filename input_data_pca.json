@@ -1,0 +1,14 @@
+{
+  "cubic1404": {
+    "data_dir": "cubic1404",
+    "traits": ["cubic1404_ATI", "cubic1404_DTT", "cubic1404_ED", "cubic1404_EL", "cubic1404_ELL", "cubic1404_ELW",
+    "cubic1404_EW", "cubic1404_SAI"],
+    "mode": "min",
+    "metric_name": ["rmse", "pearson", "mse", "mae", "R2"],
+    "hidden_size": [[512], [1024, 512]],
+    "out_dim": 1,
+    "genotypes_dir": "cubic1404_genotypes_pca_0.99.csv",
+    "input_dim": 1282,
+    "batch_size": 32
+  }
+}
